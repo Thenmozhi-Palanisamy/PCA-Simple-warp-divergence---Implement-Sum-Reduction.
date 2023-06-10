@@ -7,7 +7,7 @@ To compare the performance of the reduceUnrolling16 kernel with reduceUnrolling8
 
 
 ## Procedure:Step 1:
-``
+
 Step 1:
 Import the necessary files and libraries.
 Step 2:
@@ -24,7 +24,7 @@ Step 7:
 Implement error validation and handling for CUDA function executions.
 Step 8:
 Free the host and device memory, reset the device, and check the results.
-``
+
 ## program:
 Developed By: Thenmozhi P
 Register No.: 212221230116
@@ -33,13 +33,13 @@ Register No.: 212221230116
 #include <cuda_runtime.h>
 #include <stdio.h>
 
-/*``````
+/*
  * This code implements the interleaved and neighbor-paired approaches to
  * parallel reduction in CUDA. For this example, the sum operation is used. A
  * variety of optimizations on parallel reduction aimed at reducing divergence
  * are also demonstrated, such as unrolling.
  */
-
+````
 // Recursive Implementation of Interleaved Pair Approach
 int recursiveReduce(int *data, int const size)
 {
@@ -786,6 +786,8 @@ gpu Cmptnroll   elapsed 0.000414 sec gpu_sum: 2139353471 <<<grid 4096 block 512>
                     0.00%  1.2400us         3     413ns     190ns     830ns  cuDeviceGetCount
                     0.00%     650ns         2     325ns     180ns     470ns  cuDeviceGet
                     0.00%     240ns         1     240ns     240ns     240ns  cuDeviceGetUuid
+              
+ # output:
 ![image](https://github.com/Thenmozhi-Palanisamy/PCA-Simple-warp-divergence---Implement-Sum-Reduction./assets/95198708/a4471106-db1e-4f04-a7fb-5d6447689
 ## Result:
 The performance of the reduceUnrolling16 kernel has been compared and analyzed with that of the reduceUnrolling8 kernel using nvprof based on the collected metrics and events.
