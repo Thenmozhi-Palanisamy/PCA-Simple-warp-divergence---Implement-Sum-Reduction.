@@ -722,12 +722,12 @@ int main(int argc, char **argv)
     return EXIT_SUCCESS;
 }
 ````
-## Output:
+
 
 ![image](https://github.com/Thenmozhi-Palanisamy/PCA-Simple-warp-divergence---Implement-Sum-Reduction./assets/95198708/4eb6052c-1e4e-4226-af4e-04f5f566981b)
 
 Kernel reduceUnrolling16:
-
+```
 root@MidPC:/home/student/Desktop# nvcc first.cu
 root@MidPC:/home/student/Desktop# ./a.out
 ./a.out starting reduction at device 0: NVIDIA GeForce GTX 1660 SUPER     with array size 16777216  grid 32768 block 512
@@ -785,11 +785,14 @@ gpu Cmptnroll   elapsed 0.000414 sec gpu_sum: 2139353471 <<<grid 4096 block 512>
                     0.00%  2.4100us         1  2.4100us  2.4100us  2.4100us  cudaSetDevice
                     0.00%  1.2400us         3     413ns     190ns     830ns  cuDeviceGetCount
                     0.00%     650ns         2     325ns     180ns     470ns  cuDeviceGet
-                    0.00%     240ns         1     240ns     240ns     240ns  cuDeviceGetUuid
-              
- # output:
-    
-![image](https://github.com/Thenmozhi-Palanisamy/PCA-Simple-warp-divergence---Implement-Sum-Reduction./assets/95198708/a4471106-db1e-4f04-a7fb-5d6447689
+                    0.00%     240ns         1     240ns     240ns     240ns  cuDeviceGetUui
+                   
+  ````                 
+ ## output                  
+   
+   ![image](https://github.com/Thenmozhi-Palanisamy/PCA-Simple-warp-divergence---Implement-Sum-Reduction./assets/95198708/8348ca8a-c335-4aee-be74-4da72ef81b9a)
+![image](https://github.com/Thenmozhi-Palanisamy/PCA-Simple-warp-divergence---Implement-Sum-Reduction./assets/95198708/2f6258bc-deda-4967-a9de-5f4ffd7e9dfc)
+
 ## Result:
 The performance of the reduceUnrolling16 kernel has been compared and analyzed with that of the reduceUnrolling8 kernel using nvprof based on the collected metrics and events.
 
